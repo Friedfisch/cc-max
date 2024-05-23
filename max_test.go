@@ -14,7 +14,7 @@ func run(t *testing.T, n1, n2, e float64) {
 	}
 	r2 := ccmax.MaxCmp(n1, n2)
 	if r != r2 {
-		t.Errorf("Error Ctrl (%f, %f): %f did not match %f", n1, n2, r, r2)
+		t.Errorf("Error Cmp (%f, %f): %f did not match %f", n1, n2, r, r2)
 	}
 	r3 := ccmax.MaxCompact(n1, n2)
 	if r != r3 {
@@ -26,7 +26,7 @@ func run(t *testing.T, n1, n2, e float64) {
 	}
 	r5 := ccmax.MaxNative(n1, n2)
 	if r != r5 {
-		t.Errorf("Error Ctrl (%f, %f): %f did not match %f", n1, n2, r, r5)
+		t.Errorf("Error Native (%f, %f): %f did not match %f", n1, n2, r, r5)
 	}
 }
 
