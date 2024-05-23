@@ -26,9 +26,17 @@ func MaxCompact(a float64, b float64) float64 {
 		float64((math.Float64bits(a-b)+(1<<63))&(math.Float64bits(b-a)+(1<<63))&(1<<63)>>63)*a
 }
 
+func MaxMath(a float64, b float64) float64 {
+	return ((a + b) + math.Sqrt((a-b)*(a-b))) / 2
+}
+
 func MaxCmp(a float64, b float64) float64 {
 	if a >= b {
 		return a
 	}
 	return b
+}
+
+func MaxNative(a float64, b float64) float64 {
+	return math.Max(a, b)
 }
